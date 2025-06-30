@@ -32,7 +32,7 @@ export default function VoiceRecorder() {
       <button
         onClick={isRecording ? handleStopRecording : handleStartRecording}
         className={`w-full py-2 px-4 rounded-full ${
-          isRecording ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'
+          isRecording ? 'bg-gray-500 hover:bg-gray-600' : 'bg-blue-500 hover:bg-blue-600'
         } text-white font-bold`}
       >
         {isRecording ? 'Stop Recording' : 'Start Recording'}

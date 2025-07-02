@@ -21,12 +21,43 @@ export default function BookingPage({ applicantData, onBack }: BookingPageProps)
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
-    document.body.appendChild(script);
+    script.onload = () => {
+      console.log('Calendly script loaded successfully');
+    };
+    script.onerror = () => {
+      console.error('Failed to load Calendly script');
+      showFallback();
+    };
+    
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+    if (!existingScript) {
+      document.head.appendChild(script);
+    }
+
+    // Fallback timeout - show fallback if Calendly doesn't load in 10 seconds
+    const fallbackTimeout = setTimeout(() => {
+      const calendlyWidget = document.querySelector('.calendly-inline-widget iframe');
+      if (!calendlyWidget) {
+        console.warn('Calendly widget not found after 10 seconds, showing fallback');
+        showFallback();
+      }
+    }, 10000);
+
+    const showFallback = () => {
+      const fallback = document.getElementById('calendly-fallback');
+      const widget = document.querySelector('.calendly-inline-widget')?.parentElement;
+      if (fallback && widget) {
+        widget.style.display = 'none';
+        fallback.classList.remove('hidden');
+      }
+    };
 
     return () => {
-      // Cleanup
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+      clearTimeout(fallbackTimeout);
+      // Cleanup - but only remove if we added it
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
       }
     };
   }, []);
@@ -78,132 +109,75 @@ export default function BookingPage({ applicantData, onBack }: BookingPageProps)
         </div>
 
         <div className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#F9B233]/20 to-[#FFD700]/20 border border-[#F9B233] rounded-full mb-6 shadow-[0_0_20px_rgba(249,178,51,0.3)]">
-            <Check className="w-5 h-5 text-[#F9B233]" />
-            <span className="text-[#F9B233] font-black" style={{ fontFamily: 'Poppins, sans-serif' }}>APPLICATION APPROVED</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Congratulations, <span className="text-[#00D4FF]">{applicantData.name}</span>!
+        <div className="text-center mb-8">          
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            You're Almost There — <span className="text-[#00D4FF]">Lock In Your Call Below</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-[#F0F0FF]/90 max-w-4xl mx-auto font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            You've been selected for a <span className="text-[#F9B233] font-black">FREE Strategy Call</span> to discuss 
-            how we can help you build your AI-powered creator business.
-          </p>
         </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Left Column - What to Expect */}
-            <div className="space-y-6">
-              <div className="bg-[#1D1D27] rounded-2xl p-6 border border-[#00D4FF]/30 shadow-[0_0_30px_rgba(0,212,255,0.2)]">
-                <h3 className="text-2xl font-black text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  What to Expect on Your Call
-                </h3>
-                
-                <div className="space-y-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-lg">
-                      <Trophy className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-2 text-lg">Personalized AI Strategy</h4>
-                      <p className="text-gray-300">We'll analyze your {applicantData.niche.toLowerCase()} niche and design a custom AI system for your audience.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-lg">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-2 text-lg">Revenue Optimization Plan</h4>
-                      <p className="text-gray-300">Based on your current {applicantData.monthlyIncome} income, we'll show you how to 3-5x your earnings.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-lg">
-                      <Clock className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-2 text-lg">Implementation Timeline</h4>
-                      <p className="text-gray-300">We'll map out exactly how to launch your AI business in the next 30-60 days.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Call Details */}
-              <div className="bg-[#1D1D27] rounded-2xl p-6 border border-[#00D4FF]/30 shadow-[0_0_30px_rgba(0,212,255,0.2)]">
-                <h3 className="text-xl font-black text-white mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  Call Details
-                </h3>
-                
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
-                    <span className="text-[#F9B233] font-semibold">Duration:</span>
-                    <span className="text-white font-bold">45 minutes</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
-                    <span className="text-[#F9B233] font-semibold">Format:</span>
-                    <span className="text-white font-bold">Zoom Video Call</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
-                    <span className="text-[#F9B233] font-semibold">Cost:</span>
-                    <span className="text-[#F9B233] font-black text-lg">100% FREE</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
-                    <span className="text-[#F9B233] font-semibold">Your Profile:</span>
-                    <span className="text-white font-bold">{applicantData.followers} followers</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Warning */}
-              <div className="bg-gradient-to-r from-[#F9B233]/20 to-[#FFD700]/20 border border-[#F9B233] rounded-xl p-5 shadow-[0_0_20px_rgba(249,178,51,0.3)]">
-                <p className="text-[#F9B233] font-bold">
-                  <strong>⚠️ Important:</strong> We only accept 3-5 new creators per month. 
-                  This spot is reserved for you for the next 48 hours.
-                </p>
-              </div>
-
-              {/* Back Button */}
-              <button
-                onClick={onBack}
-                className="text-gray-400 hover:text-[#00D4FF] transition-colors font-semibold"
-              >
-                ← Back to application
-              </button>
-            </div>
-
-            {/* Right Column - Calendly Widget */}
+          {/* Calendly Widget */}
+          <div className="mb-8">
             <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
               <div 
                 className="calendly-inline-widget" 
-                data-url="https://calendly.com/YOUR_CALENDLY_USERNAME_HERE/strategy-call?hide_gdpr_banner=1"
+                data-url="https://calendly.com/zach-zephryxlabs/30min?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=00cbff"
                 style={{ minWidth: '320px', height: '700px' }}
-                data-processed="true"
               />
-              
-              {/* Fallback if Calendly doesn't load */}
-              <noscript>
-                <div className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4">Schedule Your Strategy Call</h3>
-                  <p className="text-gray-600 mb-4">
-                    Please enable JavaScript to use our booking system, or contact us directly:
-                  </p>
-                  <a 
-                    href="mailto:support@yourcompany.com" 
-                    className="text-blue-600 hover:underline"
-                  >
-                    support@yourcompany.com
-                  </a>
-                </div>
-              </noscript>
+            </div>
+            
+            {/* Fallback if Calendly doesn't load */}
+            <div id="calendly-fallback" className="hidden">
+              <div className="bg-[#1D1D27] rounded-2xl p-8 text-center border border-[#00D4FF]/30">
+                <h3 className="text-xl font-bold text-white mb-4">Schedule Your Strategy Call</h3>
+                <p className="text-gray-300 mb-6">
+                  Click the link below to book your 30-minute strategy session:
+                </p>
+                <a 
+                  href="https://calendly.com/zach-zephryxlabs/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#00D4FF] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#00B8E6] transition-colors"
+                >
+                  Book Your Call Now →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Scarcity Message */}
+          <div className="text-center mb-8">
+            <div className="bg-gradient-to-r from-[#F9B233]/20 to-[#FFD700]/20 border border-[#F9B233] rounded-xl p-6 max-w-3xl mx-auto shadow-[0_0_20px_rgba(249,178,51,0.3)]">
+              <p className="text-[#F9B233] font-bold text-lg md:text-xl" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                ⚠️ Spots fill fast. We only build a few AI businesses per month — secure your session now before the calendar closes.
+              </p>
+            </div>
+          </div>
+
+          {/* Call Details */}
+          <div className="bg-[#1D1D27] rounded-2xl p-6 border border-[#00D4FF]/30 shadow-[0_0_30px_rgba(0,212,255,0.2)] max-w-2xl mx-auto">
+            <h3 className="text-xl font-black text-white mb-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Call Details
+            </h3>
+            
+            <div className="space-y-4">
+              <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
+                <span className="text-[#F9B233] font-semibold">Duration:</span>
+                <span className="text-white font-bold">30 minutes</span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
+                <span className="text-[#F9B233] font-semibold">Format:</span>
+                <span className="text-white font-bold">Zoom Video Call</span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
+                <span className="text-[#F9B233] font-semibold">Cost:</span>
+                <span className="text-[#F9B233] font-black text-lg">100% FREE</span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-[#2A2A3A] rounded-lg">
+                <span className="text-[#F9B233] font-semibold">Your Profile:</span>
+                <span className="text-white font-bold">{applicantData.followers} followers</span>
+              </div>
             </div>
           </div>
 

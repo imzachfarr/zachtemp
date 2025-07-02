@@ -189,28 +189,37 @@ export default function VSLPage() {
             </a>
           </motion.div>
 
-          {/* Trust indicators - Mobile optimized */}
+          {/* Captivating Headline Section */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
             className="mt-12 sm:mt-16"
           >
-            {/* As featured in - Marquee */}
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-500 text-xs sm:text-sm font-semibold mb-3 sm:mb-4">OUR CREATORS HAVE BEEN FEATURED IN</p>
-              <div className="relative overflow-hidden whitespace-nowrap">
-                <div className="inline-flex animate-marquee opacity-60">
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">FORBES</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">TechCrunch</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">The Verge</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">Mashable</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">FORBES</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">TechCrunch</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">The Verge</span>
-                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-400 mx-8">Mashable</span>
-                </div>
+            <div className="text-center max-w-4xl mx-auto px-4">
+              {/* Attention-grabbing subheader */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00D4FF]/20 to-[#00B8E6]/20 border border-[#00D4FF]/30 rounded-full mb-6">
+                <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
+                <span className="text-[#00D4FF] text-xs sm:text-sm font-bold uppercase tracking-wider">Breaking: Industry Secret Exposed</span>
+                <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
               </div>
+              
+              {/* Main captivating headline */}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
+                While You're Making <span className="text-red-400">$2,000</span> Per Post...
+                <br />
+                <span className="text-green-400">Smart Creators Are Making $50K+/Month</span>
+                <br />
+                From The Same Audience
+              </h2>
+              
+              {/* Supporting text */}
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-medium italic mb-6">
+                "The biggest money isn't in the content... it's in what happens after they watch it."
+              </p>
+              
+              {/* Visual separator */}
+              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#00D4FF] to-transparent mx-auto"></div>
             </div>
           </motion.div>
 
@@ -760,14 +769,7 @@ export default function VSLPage() {
               </p>
             </div>
 
-            {/* Footer Links */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
-              <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="/disclaimer" className="text-gray-400 hover:text-white transition-colors">Full Disclaimer</a>
-              <a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-              <a href="/refund-policy" className="text-gray-400 hover:text-white transition-colors">Refund Policy</a>
-            </div>
+
 
             {/* Copyright */}
             <div className="flex items-center justify-center gap-2 pt-6 border-t border-gray-800">

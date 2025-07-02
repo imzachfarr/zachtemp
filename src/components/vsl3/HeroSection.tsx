@@ -55,7 +55,7 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(96, 57, 255, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(0, 212, 255, ${particle.opacity})`;
         ctx.fill();
 
         // Draw connections
@@ -69,7 +69,7 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(96, 57, 255, ${0.1 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -101,21 +101,21 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
       {/* Circuit Pattern Overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236039FF' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300D4FF' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
       </div>
 
       <div className="relative z-10 max-w-[1180px] mx-auto px-8 text-center">
         {/* Warning Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1D1D27] border border-[#6039FF]/30 rounded-full mb-6 animate-pulse">
-          <Lock className="w-4 h-4 text-[#6039FF]" />
-          <span className="text-sm font-black text-[#6039FF]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, letterSpacing: '0.1em' }}>LIMITED ACCESS</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1D1D27] border border-[#00D4FF]/30 rounded-full mb-6 animate-pulse">
+          <Lock className="w-4 h-4 text-[#00D4FF]" />
+          <span className="text-sm font-black text-[#00D4FF]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, letterSpacing: '0.1em' }}>LIMITED ACCESS</span>
         </div>
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl font-black tracking-wider mb-6 leading-tight" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, letterSpacing: '0.05em' }}>
           The AI System That's Making
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#6039FF] to-[#2726FF] animate-gradient">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] animate-gradient">
             6-Figure Creators Obsolete
           </span>
         </h1>
@@ -129,7 +129,7 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
 
         {/* Video Player */}
         <div className="relative max-w-4xl mx-auto mb-8">
-          <div className="relative border-2 border-[#6039FF]/30 rounded-lg overflow-hidden shadow-[0_0_50px_rgba(96,57,255,0.3)]">
+          <div className="relative border-2 border-[#00D4FF]/30 rounded-lg overflow-hidden shadow-[0_0_50px_rgba(0,212,255,0.3)]">
             <RestrictedVideoPlayer
               videoUrl="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
               thumbnailUrl="https://via.placeholder.com/1280x720/1d1d27/6039ff?text=VSL+Video"
@@ -155,8 +155,8 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
               href="/qualification"
               className="relative group inline-block"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#6039FF] to-[#2726FF] rounded-lg blur-lg group-hover:blur-xl transition-all duration-300 opacity-70" />
-              <div className="relative bg-gradient-to-r from-[#6039FF] to-[#2726FF] text-white px-8 py-4 rounded-lg font-black text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(39,38,255,0.5)]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, letterSpacing: '0.05em' }}>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] rounded-lg blur-lg group-hover:blur-xl transition-all duration-300 opacity-70" />
+              <div className="relative bg-gradient-to-r from-[#00D4FF] to-[#00B8E6] text-white px-8 py-4 rounded-lg font-black text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(0,212,255,0.5)]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900, letterSpacing: '0.05em' }}>
                 APPLY FOR AI SYSTEM ACCESS
                 <span className="block text-sm font-bold mt-1 text-white/80" style={{ fontWeight: 600 }}>
                   Only 3 Creator Spots Remaining
@@ -168,8 +168,8 @@ export default function HeroSection({ showCTA }: HeroSectionProps) {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-[#6039FF]/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-[#6039FF] rounded-full mt-2 animate-scroll" />
+          <div className="w-6 h-10 border-2 border-[#00D4FF]/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-[#00D4FF] rounded-full mt-2 animate-scroll" />
           </div>
         </div>
       </div>

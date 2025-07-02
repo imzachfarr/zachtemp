@@ -1,0 +1,20 @@
+{
+  "sessionId": "qualification_1751424379425_j9yrx0bsy",
+  "timestamp": 1751424394312,
+  "currentStep": 9,
+  "totalSteps": 9,
+  "responses": {
+    "name": "adf",
+    "email": "asf",
+    "phone": "asf",
+    "followers": "100K - 999K",
+    "niche": "Finance & Investing",
+    "monetization": "Not currently monetizing",
+    "monthlyIncome": "$5K - $25K",
+    "investmentBudget": "$5K-$10K",
+    "whyWorkWithUs": "af"
+  },
+  "isComplete": true,
+  "completedAt": 1751424394312,
+  "source": "qualification"
+}

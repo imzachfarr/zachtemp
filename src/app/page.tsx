@@ -185,7 +185,7 @@ export default function VSLPage() {
               href="/qualification"
               className="group relative inline-flex items-center justify-center px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-6 text-base sm:text-lg md:text-xl font-bold text-black bg-[#00D4FF] rounded-full hover:bg-[#00B8E6] transform hover:scale-105 transition-all shadow-2xl w-[90%] sm:w-auto max-w-md"
             >
-              <span className="relative z-10">Apply for AI Partnership →</span>
+              <span className="relative z-10">Apply Now</span>
             </a>
           </motion.div>
 
@@ -305,180 +305,108 @@ export default function VSLPage() {
               </div> {/* Close main content container */}
             </div> {/* Close content wrapper */}
 
-            {/* Success Stories Section - Mobile optimized */}
+            {/* Tyler's Success Story - Single Testimonial */}
             <div className="mt-12 sm:mt-16">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 text-center px-4">
                 And this isn't theory. It's already happening:
               </h3>
 
-              <div className="space-y-8 sm:space-y-12">
-                {/* Tyler's Story - Mobile responsive layout */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-[#00D4FF]/10 transition-all duration-300"
-                >
-                  <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8">
-                    {/* Image placeholder for desktop - left side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Tyler Image 1</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 text-center">
-                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-1">Tyler</h4>
-                      <p className="text-[#00D4FF] text-base sm:text-lg mb-1">Fitness Creator</p>
-                      <p className="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">53.1k followers</p>
-                      <p className="text-gray-300 italic text-sm sm:text-base mb-3 sm:mb-4">"I just want to help people get fit without all the BS."</p>
-                      <p className="text-2xl sm:text-3xl font-bold text-[#00D4FF]">$47K in his first month</p>
-                      
-                      {/* Mobile carousel for images */}
-                      <div className="lg:hidden mt-4 relative">
-                        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 scrollbar-hide">
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Tyler Image 1</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Tyler Image 2</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Image placeholder for desktop - right side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Tyler Image 2</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
+              {/* Tyler's Story - Simplified with single image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-[#00D4FF]/10 transition-all duration-300 max-w-4xl mx-auto"
+              >
+                <div className="flex flex-col items-center gap-4 sm:gap-6 text-center">
+                  <div className="w-full max-w-xs">
+                    <img 
+                      src="/tyler-app.png" 
+                      alt="Tyler's AI App Dashboard"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
                   </div>
-                </motion.div>
+                  
+                  <div>
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-1">Tyler</h4>
+                    <p className="text-[#00D4FF] text-base sm:text-lg mb-1">Fitness Creator</p>
+                    <p className="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">53.1k followers</p>
+                    <p className="text-gray-300 italic text-sm sm:text-base mb-3 sm:mb-4">"I just want to help people get fit without all the BS."</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-[#00D4FF]">$47K in his first month</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
-                {/* Maya's Story - Mobile responsive layout */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-[#00D4FF]/10 transition-all duration-300"
-                >
-                  <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8">
-                    {/* Image placeholder for desktop - left side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Maya Image 1</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 text-center">
-                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-1">Maya</h4>
-                      <p className="text-[#00D4FF] text-base sm:text-lg mb-1">Fashion Creator</p>
-                      <p className="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">87.4k followers</p>
-                      <p className="text-gray-300 italic text-sm sm:text-base mb-3 sm:mb-4">"I wish I could just style everyone personally."</p>
-                      <p className="text-2xl sm:text-3xl font-bold text-[#00D4FF]">1,500 users in week one</p>
-                      
-                      {/* Mobile carousel for images */}
-                      <div className="lg:hidden mt-4 relative">
-                        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 scrollbar-hide">
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Maya Image 1</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Maya Image 2</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Image placeholder for desktop - right side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Maya Image 2</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
+            {/* Additional Success Stories - Vertical Layout - HIDDEN */}
+            <div className="hidden mt-16 sm:mt-20 max-w-sm mx-auto">
+              <h3 className="text-lg font-semibold text-[#00D4FF] text-center mb-8 uppercase tracking-wide">
+                WORKED WITH
+              </h3>
+              
+              <div className="space-y-6">
+                {/* Chase Dalton */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">👨‍💼</span>
                   </div>
-                </motion.div>
+                  <h4 className="text-lg font-bold text-white mb-1">Chase Dalton</h4>
+                  <p className="text-sm text-gray-400">$78,000/mo software owner</p>
+                </div>
 
-                {/* Jake's Story - Mobile responsive layout */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-[#00D4FF]/10 transition-all duration-300"
-                >
-                  <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8">
-                    {/* Image placeholder for desktop - left side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Jake Image 1</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 text-center">
-                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-1">Jake</h4>
-                      <p className="text-[#00D4FF] text-base sm:text-lg mb-1">Gaming Creator</p>
-                      <p className="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">61.7k followers</p>
-                      <p className="text-gray-300 italic text-sm sm:text-base mb-3 sm:mb-4">"I wish I could just play games all day."</p>
-                      <p className="text-2xl sm:text-3xl font-bold text-[#00D4FF]">$12K in three weeks</p>
-                      
-                      {/* Mobile carousel for images */}
-                      <div className="lg:hidden mt-4 relative">
-                        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 scrollbar-hide">
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Jake Image 1</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                          <div className="flex-shrink-0 snap-center w-40 h-28 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                            <div className="text-center p-2">
-                              <div className="text-[#00D4FF] text-xs font-semibold mb-1">Jake Image 2</div>
-                              <div className="text-gray-400 text-xs">Placeholder</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Image placeholder for desktop - right side */}
-                    <div className="hidden lg:block flex-shrink-0">
-                      <div className="w-32 h-40 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="text-center p-2">
-                          <div className="text-[#00D4FF] text-xs font-semibold mb-1">Jake Image 2</div>
-                          <div className="text-gray-400 text-xs">Placeholder</div>
-                        </div>
-                      </div>
-                    </div>
+                {/* Reed Walker */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">🚀</span>
                   </div>
-                </motion.div>
+                  <h4 className="text-lg font-bold text-white mb-1">Reed Walker</h4>
+                  <p className="text-sm text-gray-400">$64,000/mo software owner</p>
+                </div>
+
+                {/* Grant Maddox */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">💎</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-1">Grant Maddox</h4>
+                  <p className="text-sm text-gray-400">$103,000/mo software owner</p>
+                </div>
+
+                {/* Nate Colburn */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">⚡</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-1">Nate Colburn</h4>
+                  <p className="text-sm text-gray-400">$56,000/mo software owner</p>
+                </div>
+
+                {/* Jaxon Hart */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">🔥</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-1">Jaxon Hart</h4>
+                  <p className="text-sm text-gray-400">$92,000/mo software owner</p>
+                </div>
+
+                {/* Blake Rowan */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">💰</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-1">Blake Rowan</h4>
+                  <p className="text-sm text-gray-400">$84,000/mo software owner</p>
+                </div>
+
+                {/* Cody Reaves */}
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center shadow-lg border border-gray-700">
+                    <span className="text-4xl">🏆</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-1">Cody Reaves</h4>
+                  <p className="text-sm text-gray-400">$116,000/mo software owner</p>
+                </div>
               </div>
             </div>
 
@@ -493,33 +421,363 @@ export default function VSLPage() {
                 href="/qualification"
                 className="group relative inline-flex items-center justify-center px-6 py-4 sm:px-8 sm:py-5 md:px-12 md:py-6 text-base sm:text-lg md:text-xl font-bold text-black bg-[#00D4FF] rounded-full hover:bg-[#00B8E6] transform hover:scale-105 transition-all shadow-2xl w-[90%] sm:w-auto max-w-md"
               >
-                <span className="relative z-10">Apply for AI Partnership →</span>
+                <span className="relative z-10">Apply Now</span>
               </a>
               <p className="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">
                 <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full animate-pulse"></span> Only accepting 3 creators this month
               </p>
             </motion.div>
+
+            {/* Urgency Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-20 sm:mt-24 max-w-4xl mx-auto"
+            >
+              <div className="relative">
+                {/* Background accent */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF]/5 to-transparent rounded-3xl"></div>
+                
+                <div className="relative z-10 p-6 sm:p-8 md:p-12">
+                  <div className="text-center mb-8 sm:mb-12">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
+                      <span className="text-[#00D4FF] text-sm sm:text-base font-semibold uppercase tracking-wider">Critical Timing</span>
+                      <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4">
+                      Some moments don't come twice.
+                    </h2>
+                    
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-transparent mx-auto"></div>
+                  </div>
+                  
+                  <div className="space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+                    <div className="bg-gray-900/30 border-l-4 border-[#00D4FF] pl-6 py-4 rounded-r-lg">
+                      <p className="text-white font-medium">
+                        Every industry has a moment where leverage quietly shifts — not to the loudest, not to the most skilled, but to the ones who moved early with clarity.
+                      </p>
+                    </div>
+
+                    <p>
+                      That's what this is. Right now, AI still feels "new" to most creators. But the ones making the real money? They're not the ones using AI to write captions or brainstorm video ideas — they're the ones who own the tool their audience uses every day.
+                    </p>
+
+                    <div className="text-center py-6">
+                      <p className="font-bold text-white text-xl sm:text-2xl">
+                        And once that shift locks in, it doesn't reset.
+                      </p>
+                    </div>
+
+                    <p>
+                      The names getting mentioned in 6 months will be the ones that planted the flag now. You don't get to "jump in later" and lead the space. You show up late, you play catch-up. This isn't about FOMO or hype — it's about positioning.
+                    </p>
+                    
+                    <div className="bg-gradient-to-r from-[#00D4FF]/10 to-transparent border border-[#00D4FF]/20 rounded-xl p-4 sm:p-6">
+                      <p className="text-[#00D4FF] font-semibold italic">
+                        The opportunity doesn't vanish… it just changes hands. And by then, you'll be the case study. Or the cautionary tale.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* AI Dashboard Carousel */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-16 sm:mt-20 max-w-6xl mx-auto"
+            >
+              <div className="overflow-hidden">
+                <div className="flex animate-scroll gap-6 pb-4">
+                  {/* First set of dashboards */}
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-1.png" 
+                        alt="AI Dashboard Analytics & Performance"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-2.png" 
+                        alt="AI Dashboard Revenue Tracking"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-3.png" 
+                        alt="AI Dashboard User Management"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Duplicate set for infinite scroll */}
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-1.png" 
+                        alt="AI Dashboard Analytics & Performance"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-2.png" 
+                        alt="AI Dashboard Revenue Tracking"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-shrink-0">
+                    <div className="rounded-xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/dashboard-3.png" 
+                        alt="AI Dashboard User Management"
+                        className="w-48 sm:w-64 md:w-80 h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Final Urgent CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mt-16 sm:mt-20"
+            >
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 sm:p-12 max-w-lg mx-auto text-center">
+                <h3 className="text-2xl sm:text-3xl font-black text-white mb-3">
+                  Only 3 Spots Available
+                </h3>
+                <p className="text-gray-300 text-base sm:text-lg mb-8">
+                  This month's cohort is almost full
+                </p>
+                
+                <a
+                  href="/qualification"
+                  className="group relative inline-flex items-center justify-center px-8 py-5 sm:px-12 sm:py-6 text-xl sm:text-2xl font-black text-black bg-[#00D4FF] rounded-full hover:bg-[#00B8E6] transform hover:scale-105 transition-all shadow-2xl w-full"
+                >
+                  <span className="relative z-10">Apply Now</span>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Client Wins Screenshots */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="mt-16 sm:mt-20 max-w-md mx-auto space-y-4"
+            >
+              {/* Screenshot images - 7 stacked images at true size */}
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0652.PNG" 
+                  alt="Client Revenue Screenshot 1"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0654.PNG" 
+                  alt="Client Revenue Screenshot 2"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0655.PNG" 
+                  alt="Client Revenue Screenshot 3"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0657.PNG" 
+                  alt="Client Revenue Screenshot 4"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0658.PNG" 
+                  alt="Client Revenue Screenshot 5"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0659.PNG" 
+                  alt="Client Revenue Screenshot 6"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/IMG_0661.PNG" 
+                  alt="Client Revenue Screenshot 7"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Footer disclaimers - Mobile optimized */}
-          <footer className="mt-16 sm:mt-20 md:mt-24 border-t border-gray-800 pt-6 sm:pt-8 text-center text-[10px] sm:text-xs text-gray-500 max-w-4xl mx-auto px-4">
-            <p className="mb-2">
-              Disclaimer: This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, this site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc.
-            </p>
-            <p className="mb-2">
-              Google, YouTube, TikTok, Instagram, and Twitter are trademarks of their respective owners. Results stated above are our personal and client results. Please understand our results are not typical, we are not implying you will achieve similar results, or that you will make any money at all.
-            </p>
-            <p className="mb-2">
-              Any success shown is based on hard work, dedication, and skills. This is not a get-rich-quick scheme. Your results may vary based on many factors including effort, experience, and market conditions.
-            </p>
-            <div className="flex items-center justify-center gap-2 mt-4">
+          {/* Footer disclaimers - Comprehensive Legal */}
+          <footer className="mt-16 sm:mt-20 md:mt-24 border-t border-gray-800 pt-8 sm:pt-12 text-center text-[8px] sm:text-[10px] md:text-xs text-gray-500 max-w-6xl mx-auto px-4">
+            
+            {/* Main Disclaimers */}
+            <div className="space-y-4 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">IMPORTANT DISCLAIMERS</h3>
+              
+              <p className="mb-4 leading-relaxed">
+                <strong>INCOME DISCLAIMER:</strong> The income figures and success stories presented on this website represent exceptional results and are not typical. These testimonials are not representative of all participants and should not be considered as guarantees or promises of similar results. Individual results will vary based on numerous factors including but not limited to: your skills, experience, dedication, business acumen, market conditions, economic factors, and the time and effort you invest. There is no guarantee that you will earn any money using the techniques and ideas presented. Success in business requires hard work, dedication, and commitment.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>NO GUARANTEE OF RESULTS:</strong> Zephryx Labs makes no warranty, guarantee, or other promise as to any results that may be obtained from using our service. While we provide examples of past results, testimonials, and case studies, we cannot and do not guarantee that you will achieve similar results. Your level of success depends on the time you devote to the program, your finances, knowledge, and various skills. Since these factors differ according to individuals, we cannot guarantee your success or income level.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>BUSINESS RISKS:</strong> Any business endeavor has inherent risk for loss of capital. Past performance does not guarantee future results. You should not risk money that you cannot afford to lose. All investments and business ventures carry risk of loss. You acknowledge that we make no representations, warranties, or guarantees regarding future earnings, business performance, or success.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>EARNINGS CLAIMS:</strong> We have made every effort to accurately represent our services and their potential. The testimonials and examples used are exceptional results, do not apply to the average person, and are not intended to represent or guarantee that anyone will achieve the same or similar results. Each individual's success depends on his or her background, dedication, desire, and motivation.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>FORWARD-LOOKING STATEMENTS:</strong> This website contains forward-looking statements that involve risks and uncertainties. These statements are based on current expectations and assumptions that are subject to risks and uncertainties. Actual results may differ materially from those described in forward-looking statements.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>PROFESSIONAL ADVICE:</strong> The information provided on this website is for educational and informational purposes only and should not be considered as professional financial, legal, or business advice. You should consult with appropriate professionals for specific advice tailored to your situation.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>AI TECHNOLOGY DISCLAIMER:</strong> The AI tools and software mentioned are subject to technological limitations, updates, and changes beyond our control. Performance of AI systems may vary and cannot be guaranteed. Results from AI implementations depend on numerous factors including data quality, implementation, and market conditions.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>REFUND POLICY:</strong> Due to the nature of digital products and services, all sales are final. We do not offer refunds except where required by law. Please review all materials and ask questions before purchasing.
+              </p>
+
+              <p className="mb-4 leading-relaxed">
+                <strong>LIMITATION OF LIABILITY:</strong> In no event shall Zephryx Labs be liable for any direct, indirect, punitive, incidental, special, or consequential damages arising out of or in any way connected with the use of this website or with the delay or inability to use this website, or for any information obtained through this website, or otherwise arising out of the use of this website, whether based on contract, tort, negligence, strict liability, or otherwise, even if Zephryx Labs has been advised of the possibility of damages.
+              </p>
+            </div>
+
+            {/* Trademark Disclaimers */}
+            <div className="space-y-3 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">TRADEMARK DISCLAIMERS</h3>
+              
+              <p className="mb-2">
+                This site is not a part of Facebook™, Google™, YouTube™, TikTok™, Instagram™, Twitter™, LinkedIn™, or any other social media platform and is NOT endorsed by any of these companies in any way. All trademarks are the property of their respective owners.
+              </p>
+              
+              <p className="mb-2">
+                FACEBOOK™ is a trademark of Meta Platforms, Inc. GOOGLE™ and YOUTUBE™ are trademarks of Google LLC. TIKTOK™ is a trademark of ByteDance Ltd. INSTAGRAM™ is a trademark of Meta Platforms, Inc. TWITTER™ is a trademark of Twitter, Inc. LINKEDIN™ is a trademark of LinkedIn Corporation.
+              </p>
+            </div>
+
+            {/* GDPR and Privacy */}
+            <div className="space-y-3 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">PRIVACY AND DATA PROTECTION</h3>
+              
+              <p className="mb-2">
+                We are committed to protecting your privacy and personal data in accordance with applicable data protection laws, including GDPR for EU residents and CCPA for California residents. By using this website, you consent to our collection and use of personal information as outlined in our Privacy Policy.
+              </p>
+              
+              <p className="mb-2">
+                We use cookies and similar tracking technologies to improve your browsing experience, analyze website traffic, and understand where our visitors are coming from. You can control cookie settings through your browser preferences.
+              </p>
+            </div>
+
+            {/* Medical and Health Disclaimers */}
+            <div className="space-y-3 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">ADDITIONAL DISCLAIMERS</h3>
+              
+              <p className="mb-2">
+                <strong>HEALTH DISCLAIMER:</strong> If any health, fitness, or wellness content is referenced, it is for informational purposes only and is not intended as medical advice. Always consult with a healthcare professional before making changes to your health regimen.
+              </p>
+              
+              <p className="mb-2">
+                <strong>INVESTMENT DISCLAIMER:</strong> Nothing on this website should be considered as investment advice. All business investments carry risk of loss. Past performance does not guarantee future results.
+              </p>
+              
+              <p className="mb-2">
+                <strong>AFFILIATE DISCLOSURE:</strong> This website may contain affiliate links. We may receive compensation if you purchase products or services through our links, at no additional cost to you.
+              </p>
+            </div>
+
+            {/* Anti-Spam and Legal Compliance */}
+            <div className="space-y-3 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">LEGAL COMPLIANCE</h3>
+              
+              <p className="mb-2">
+                <strong>CAN-SPAM COMPLIANCE:</strong> By providing your email address, you agree to receive communications from us. You can unsubscribe at any time by clicking the unsubscribe link in our emails. We comply with the CAN-SPAM Act and all applicable email marketing laws.
+              </p>
+              
+              <p className="mb-2">
+                <strong>TCPA COMPLIANCE:</strong> By providing your phone number, you consent to receive text messages and calls from us regarding our services. Message and data rates may apply. You can opt out at any time by replying STOP.
+              </p>
+              
+              <p className="mb-2">
+                <strong>JURISDICTION:</strong> This website is operated from the United States. These terms are governed by the laws of [Your State/Country]. Any disputes arising from the use of this website will be subject to the jurisdiction of the courts in [Your State/Country].
+              </p>
+            </div>
+
+            {/* Contact and Support */}
+            <div className="space-y-3 mb-8">
+              <h3 className="text-sm font-bold text-gray-400 mb-4">CONTACT INFORMATION</h3>
+              
+              <p className="mb-2">
+                For questions about these disclaimers, our services, or to exercise your data protection rights, please contact us at: support@zephryxlabs.com
+              </p>
+              
+              <p className="mb-2">
+                <strong>UPDATES TO DISCLAIMERS:</strong> We reserve the right to update these disclaimers at any time. Changes will be posted on this page with the date of last revision.
+              </p>
+            </div>
+
+            {/* Footer Links */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="/disclaimer" className="text-gray-400 hover:text-white transition-colors">Full Disclaimer</a>
+              <a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a>
+              <a href="/refund-policy" className="text-gray-400 hover:text-white transition-colors">Refund Policy</a>
+            </div>
+
+            {/* Copyright */}
+            <div className="flex items-center justify-center gap-2 pt-6 border-t border-gray-800">
               <img 
                 src="/zephryx-logo-icon.PNG" 
                 alt="Zephryx Labs Icon" 
                 className="h-6 sm:h-8"
               />
               <p>
-                © {new Date().getFullYear()} Zephryx Labs. All rights reserved.
+                © {new Date().getFullYear()} Zephryx Labs. All rights reserved. Last updated: {new Date().toLocaleDateString()}
               </p>
             </div>
           </footer>

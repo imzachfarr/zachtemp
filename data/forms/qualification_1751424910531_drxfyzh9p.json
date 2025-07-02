@@ -1,0 +1,20 @@
+{
+  "sessionId": "qualification_1751424910531_drxfyzh9p",
+  "timestamp": 1751424950246,
+  "currentStep": 9,
+  "totalSteps": 9,
+  "responses": {
+    "name": "as",
+    "email": "asd",
+    "phone": "asd",
+    "followers": "10K - 99K",
+    "niche": "Technology & AI",
+    "monetization": "Coaching/consulting",
+    "monthlyIncome": "$5K - $25K",
+    "investmentBudget": "$30K-$100K",
+    "whyWorkWithUs": "s"
+  },
+  "isComplete": true,
+  "completedAt": 1751424950246,
+  "source": "qualification"
+}

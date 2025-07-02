@@ -1,0 +1,20 @@
+{
+  "sessionId": "qualification_1751424823394_y9hzx4bnm",
+  "timestamp": 1751424868162,
+  "currentStep": 9,
+  "totalSteps": 9,
+  "responses": {
+    "name": "Zach",
+    "email": "zfarr97@gmail.com",
+    "phone": "234",
+    "followers": "10K - 99K",
+    "niche": "Technology & AI",
+    "monetization": "Coaching/consulting",
+    "monthlyIncome": "$25K+",
+    "investmentBudget": "$10K-$30K",
+    "whyWorkWithUs": "234"
+  },
+  "isComplete": true,
+  "completedAt": 1751424868162,
+  "source": "qualification"
+}

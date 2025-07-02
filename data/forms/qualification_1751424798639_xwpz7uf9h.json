@@ -1,0 +1,20 @@
+{
+  "sessionId": "qualification_1751424798639_xwpz7uf9h",
+  "timestamp": 1751424810179,
+  "currentStep": 9,
+  "totalSteps": 9,
+  "responses": {
+    "name": "Zach",
+    "email": "asd",
+    "phone": "asd",
+    "followers": "10K - 99K",
+    "niche": "Health & Fitness",
+    "monetization": "Brand partnerships/sponsorships",
+    "monthlyIncome": "$5K - $25K",
+    "investmentBudget": "$10K-$30K",
+    "whyWorkWithUs": "ad"
+  },
+  "isComplete": true,
+  "completedAt": 1751424810179,
+  "source": "qualification"
+}

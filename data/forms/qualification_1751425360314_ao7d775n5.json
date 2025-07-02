@@ -1,0 +1,20 @@
+{
+  "sessionId": "qualification_1751425360314_ao7d775n5",
+  "timestamp": 1751425383741,
+  "currentStep": 9,
+  "totalSteps": 9,
+  "responses": {
+    "name": "Zach Farr",
+    "email": "zfarr97@gmail.com",
+    "phone": "4796014680",
+    "followers": "10K - 99K",
+    "niche": "Lifestyle & Fashion",
+    "monetization": "Brand partnerships/sponsorships",
+    "monthlyIncome": "$25K+",
+    "investmentBudget": "$10K-$30K",
+    "whyWorkWithUs": "this is my why\n"
+  },
+  "isComplete": true,
+  "completedAt": 1751425383741,
+  "source": "qualification"
+}

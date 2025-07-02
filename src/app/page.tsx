@@ -197,13 +197,6 @@ export default function VSLPage() {
             className="mt-12 sm:mt-16"
           >
             <div className="text-center max-w-4xl mx-auto px-4">
-              {/* Attention-grabbing subheader */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00D4FF]/20 to-[#00B8E6]/20 border border-[#00D4FF]/30 rounded-full mb-6">
-                <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
-                <span className="text-[#00D4FF] text-xs sm:text-sm font-bold uppercase tracking-wider">Breaking: Industry Secret Exposed</span>
-                <div className="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
-              </div>
-              
               {/* Main captivating headline */}
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
                 While You're Making <span className="text-red-400">$2,000</span> Per Post...
